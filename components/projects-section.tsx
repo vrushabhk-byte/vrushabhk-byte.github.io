@@ -56,63 +56,170 @@ const projects = [
 ]
 
 export function ProjectsSection() {
+  const featured = projects.filter(p => p.featured);
+  const other = projects.filter(p => !p.featured);
+
   return (
-    <section id="projects" className="py-20 px-6">
+    <section id="projects" className="py-20 px-6 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent -z-10" />
+      
       <div className="container mx-auto max-w-5xl">
-        <div className="flex items-center gap-4 mb-12">
-          <span className="h-px flex-1 bg-border" />
-          <h2 className="text-2xl font-bold text-foreground">Projects</h2>
-          <span className="h-px flex-1 bg-border" />
+        <div className="mb-16">
+          <div className="inline-flex items-center gap-3 px-4 py-2 bg-primary/10 border border-primary/30 rounded-full backdrop-blur-sm mb-6">
+            <Folder className="h-4 w-4 text-primary" />
+            <span className="text-sm text-primary font-medium">Featured Work</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Projects & Experiences</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl">
+            Building cloud-native solutions and infrastructure that powers modern applications
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <Card
-              key={index}
-              className="group bg-card hover:bg-secondary/50 border-border hover:border-primary/50 transition-all duration-300"
-            >
-              <CardHeader>
-                <div className="flex items-start justify-between mb-2">
-                  <Folder className="h-10 w-10 text-primary" />
+        {/* Featured Projects */}
+        <div className="mb-20">
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            {featured.map((project, index) => (
+              <div
+                key={index}
+                className="group glass rounded-2xl p-6 md:p-8 border-primary/20 hover:border-primary/50 transition-all duration-300 hover:bg-primary/5"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="p-3 bg-primary/20 rounded-lg group-hover:bg-primary/30 transition-colors">
+                    <Folder className="h-6 w-6 text-primary" />
+                  </div>
                   <div className="flex items-center gap-3">
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="p-2 hover:bg-primary/20 rounded-lg transition-colors"
                       aria-label={`View ${project.title} on GitHub`}
                     >
-                      <Github className="h-5 w-5" />
+                      <Github className="h-5 w-5 text-muted-foreground hover:text-primary" />
                     </a>
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="p-2 hover:bg-primary/20 rounded-lg transition-colors"
                       aria-label={`Open ${project.title}`}
                     >
-                      <ArrowUpRight className="h-5 w-5" />
+                      <ArrowUpRight className="h-5 w-5 text-muted-foreground hover:text-primary" />
                     </a>
                   </div>
                 </div>
-                <CardTitle className="text-lg text-foreground group-hover:text-primary transition-colors">
+                
+                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                   {project.title}
-                </CardTitle>
-                <CardDescription className="text-muted-foreground leading-relaxed">
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-6">
                   {project.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
+                </p>
+                
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
-                    <Badge key={tech} variant="secondary" className="text-xs font-normal">
+                    <div
+                      key={tech}
+                      className="px-2.5 py-1 text-xs font-medium bg-primary/10 text-primary border border-primary/30 rounded-full hover:bg-primary/20 transition-colors"
+                    >
                       {tech}
-                    </Badge>
+                    </div>
                   ))}
                 </div>
-              </CardContent>
-            </Card>
-          ))}
+              </div>
+            ))}
+          </div>
+
+          {/* Featured Projects Row 2 */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {featured.slice(2).map((project, index) => (
+              <div
+                key={index}
+                className="group glass rounded-2xl p-6 md:p-8 border-primary/20 hover:border-primary/50 transition-all duration-300 hover:bg-primary/5"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="p-3 bg-primary/20 rounded-lg group-hover:bg-primary/30 transition-colors">
+                    <Folder className="h-6 w-6 text-primary" />
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 hover:bg-primary/20 rounded-lg transition-colors"
+                      aria-label={`View ${project.title} on GitHub`}
+                    >
+                      <Github className="h-5 w-5 text-muted-foreground hover:text-primary" />
+                    </a>
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 hover:bg-primary/20 rounded-lg transition-colors"
+                      aria-label={`Open ${project.title}`}
+                    >
+                      <ArrowUpRight className="h-5 w-5 text-muted-foreground hover:text-primary" />
+                    </a>
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  {project.description}
+                </p>
+                
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((tech) => (
+                    <div
+                      key={tech}
+                      className="px-2.5 py-1 text-xs font-medium bg-primary/10 text-primary border border-primary/30 rounded-full hover:bg-primary/20 transition-colors"
+                    >
+                      {tech}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Other Projects */}
+        <div>
+          <h3 className="text-2xl font-bold text-foreground mb-6">Other Projects</h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            {other.map((project, index) => (
+              <div
+                key={index}
+                className="group glass rounded-xl p-6 border-border hover:border-primary/40 transition-all duration-300 hover:bg-primary/5 cursor-pointer"
+              >
+                <div className="flex items-start justify-between mb-3">
+                  <h4 className="text-lg font-semibold text-foreground flex-1 group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h4>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-2 p-1.5 hover:bg-primary/20 rounded transition-colors flex-shrink-0"
+                  >
+                    <ArrowUpRight className="h-4 w-4 text-muted-foreground hover:text-primary" />
+                  </a>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {project.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="text-xs bg-secondary/50 text-muted-foreground px-2 py-1 rounded group-hover:bg-primary/10 group-hover:text-primary transition-colors"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

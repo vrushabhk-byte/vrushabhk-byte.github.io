@@ -27,21 +27,23 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/80 backdrop-blur-lg border-b border-border" : "bg-transparent"
+        isScrolled 
+          ? "glass border-b border-primary/20 shadow-lg shadow-primary/5" 
+          : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold text-foreground hover:text-primary transition-colors">
+      <nav className="container mx-auto px-6 py-4 flex items-center justify-between max-w-5xl">
+        <a href="#" className="text-2xl font-bold bg-gradient-to-r from-primary via-primary to-accent bg-clip-text text-transparent hover:opacity-80 transition-opacity">
           VK
         </a>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
             <li key={link.name}>
               <a
                 href={link.href}
-                className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium"
+                className="px-4 py-2 text-muted-foreground hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-200 text-sm font-medium"
               >
                 {link.name}
               </a>
@@ -53,7 +55,7 @@ export function Navbar() {
         <Button
           variant="ghost"
           size="icon"
-          className="md:hidden"
+          className="md:hidden hover:bg-primary/10"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -62,13 +64,13 @@ export function Navbar() {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-lg border-b border-border">
-          <ul className="container mx-auto px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden glass border-t border-primary/20 backdrop-blur-xl">
+          <ul className="container mx-auto px-6 py-4 flex flex-col gap-2 max-w-5xl">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium block py-2"
+                  className="text-muted-foreground hover:text-primary hover:bg-primary/10 px-4 py-2.5 rounded-lg transition-all duration-200 text-sm font-medium block"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
