@@ -6,51 +6,51 @@ import { ArrowUpRight, Github, Folder } from "lucide-react"
 
 const projects = [
   {
-    title: "Terraform Modules Project",
+    title: "CI/CD Pipeline for Flask Application Using Jenkins and Docker",
     description:
-      "A collection of reusable Terraform modules for AWS infrastructure. Includes VPC, ECS, RDS, and Lambda modules with best practices for security and scalability.",
-    tech: ["Terraform", "AWS", "HCL", "GitHub Actions"],
-    github: "https://github.com",
+      "Developed a complete CI/CD pipeline using Jenkins for a Python Flask application. Automated code integration, testing, containerization, and deployment to production environments.",
+    tech: ["Jenkins", "Docker", "GitHub", "Python", "Flask", "Shell Scripting"],
+    github: "https://github.com/vrushabhk-byte",
     featured: true,
   },
   {
-    title: "Fault-Tolerant Multi-Region Architecture",
+    title: "Containerized Monolithic E-commerce API with Flask and Docker",
     description:
-      "Designed and implemented a multi-region AWS architecture with automatic failover, ensuring 99.99% availability. Features Route53 health checks and cross-region replication.",
-    tech: ["AWS", "Route53", "RDS", "S3", "CloudFront"],
-    github: "https://github.com",
+      "Built and containerized a production-ready Flask REST API for an e-commerce platform. Designed clean API routes for products, cart management, and health checks with Gunicorn.",
+    tech: ["Python", "Flask", "Docker", "Gunicorn", "Pytest"],
+    github: "https://github.com/vrushabhk-byte",
     featured: true,
   },
   {
-    title: "CI/CD Pipeline using GitHub Actions",
+    title: "Automated ML API Deployment (Docker + CI/CD + Remote Server)",
     description:
-      "End-to-end CI/CD pipeline for microservices with automated testing, security scanning, Docker builds, and blue-green deployments to EKS clusters.",
-    tech: ["GitHub Actions", "Docker", "Kubernetes", "Helm", "ArgoCD"],
-    github: "https://github.com",
+      "Containerized a Python-based ML inference API with Docker and integrated GitHub Actions for automated CI/CD. Enabled GPU inference with NVIDIA CUDA drivers and automated remote deployment.",
+    tech: ["Docker", "Python", "FastAPI", "GitHub Actions", "Bash", "Pytest", "Git"],
+    github: "https://github.com/vrushabhk-byte",
     featured: true,
   },
   {
-    title: "Kubernetes Monitoring Stack",
+    title: "Terraform Modules with Remote State Management (AWS IaC)",
     description:
-      "Complete observability solution with Prometheus, Grafana, and Alertmanager. Custom dashboards for cluster health, application metrics, and cost optimization.",
-    tech: ["Kubernetes", "Prometheus", "Grafana", "Helm"],
-    github: "https://github.com",
+      "Designed reusable Terraform modules for provisioning AWS infrastructure including VPC, EC2, and RDS. Implemented remote state management with S3 and DynamoDB for consistency and locking.",
+    tech: ["Terraform", "AWS", "HCL", "S3", "DynamoDB", "Git"],
+    github: "https://github.com/vrushabhk-byte",
+    featured: true,
+  },
+  {
+    title: "Kubernetes Manifests & Orchestration",
+    description:
+      "Created and maintained Kubernetes manifests for Deployments, Services, ConfigMaps, and Secrets. Performed rolling updates, monitored workload health, and ensured high availability.",
+    tech: ["Kubernetes", "kubectl", "YAML", "Helm"],
+    github: "https://github.com/vrushabhk-byte",
     featured: false,
   },
   {
-    title: "AWS Cost Optimization Tool",
+    title: "Ansible Playbooks for Infrastructure Automation",
     description:
-      "Python-based tool that analyzes AWS costs and provides recommendations for rightsizing, reserved instances, and unused resource cleanup.",
-    tech: ["Python", "AWS SDK", "Lambda", "CloudWatch"],
-    github: "https://github.com",
-    featured: false,
-  },
-  {
-    title: "Docker Compose Templates",
-    description:
-      "Production-ready Docker Compose templates for common development stacks including databases, message queues, and caching solutions.",
-    tech: ["Docker", "Docker Compose", "PostgreSQL", "Redis"],
-    github: "https://github.com",
+      "Automated server configuration, application setup, and system provisioning using Ansible playbooks and roles. Improved environment consistency and reduced manual setup time significantly.",
+    tech: ["Ansible", "Linux", "YAML", "Shell Scripting"],
+    github: "https://github.com/vrushabhk-byte",
     featured: false,
   },
 ]

@@ -5,40 +5,13 @@ import { ArrowUpRight } from "lucide-react"
 
 const experiences = [
   {
-    period: "2023 — Present",
-    title: "Senior DevOps Engineer",
-    company: "TechCorp Inc.",
-    companyUrl: "https://example.com",
-    description:
-      "Lead the infrastructure team in designing and implementing cloud-native solutions on AWS. Architected multi-region deployment strategies reducing downtime by 99%. Mentored junior engineers on Kubernetes and IaC best practices.",
-    skills: ["AWS", "Kubernetes", "Terraform", "GitHub Actions", "ArgoCD"],
-  },
-  {
-    period: "2021 — 2023",
+    period: "April 2022 — Present",
     title: "DevOps Engineer",
-    company: "CloudScale Solutions",
-    companyUrl: "https://example.com",
+    company: "Automaton AI Infosystem Pvt. Ltd.",
+    companyUrl: "https://www.linkedin.com/in/vrushabh-kothari-a33119235/",
     description:
-      "Built and maintained CI/CD pipelines for 50+ microservices. Implemented infrastructure as code using Terraform, reducing provisioning time by 80%. Set up comprehensive monitoring with Prometheus and Grafana.",
-    skills: ["Docker", "Jenkins", "Terraform", "Prometheus", "Grafana"],
-  },
-  {
-    period: "2019 — 2021",
-    title: "Systems Administrator",
-    company: "DataFlow Systems",
-    companyUrl: "https://example.com",
-    description:
-      "Managed Linux servers and automated routine tasks with Ansible and Bash scripts. Migrated legacy applications to containerized environments. Improved system security posture through automated patching.",
-    skills: ["Linux", "Ansible", "Bash", "Docker", "Nginx"],
-  },
-  {
-    period: "2018 — 2019",
-    title: "Junior Cloud Engineer",
-    company: "StartupHub",
-    companyUrl: "https://example.com",
-    description:
-      "Assisted in setting up AWS infrastructure for startup clients. Created documentation and runbooks for common operational procedures. Learned cloud architecture patterns and DevOps methodologies.",
-    skills: ["AWS", "Linux", "Python", "CloudWatch"],
+      "Systematized application deployments across dev, staging, and production. Built Docker images and Kubernetes manifests for consistent deployments. Orchestrated ML workflows on Kubernetes with GPU support (NVIDIA CUDA). Automated infrastructure using Ansible playbooks and Terraform IaC. Implemented CI/CD pipelines with GitHub Actions and Jenkins. Designed scalable ETL pipelines reducing processing time through optimization strategies.",
+    skills: ["Docker", "Kubernetes", "Ansible", "Terraform", "GitHub Actions", "Jenkins", "AWS", "Python", "GitOps"],
   },
 ]
 

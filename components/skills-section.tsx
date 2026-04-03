@@ -6,42 +6,42 @@ const skillCategories = [
   {
     name: "Cloud Platforms",
     icon: Cloud,
-    skills: ["AWS", "GCP", "Azure"],
+    skills: ["AWS (EC2, S3, IAM, Lambda, VPC, ALB, Route53, CloudFront, RDS)"],
   },
   {
     name: "Infrastructure as Code",
     icon: Server,
-    skills: ["Terraform", "CloudFormation", "Pulumi", "Ansible"],
+    skills: ["Terraform", "Ansible", "CloudFormation", "YAML"],
   },
   {
     name: "Containers & Orchestration",
     icon: Container,
-    skills: ["Docker", "Kubernetes", "ECS", "Helm"],
+    skills: ["Docker", "Kubernetes", "kubectl", "Helm", "Container Images"],
   },
   {
     name: "CI/CD",
     icon: GitBranch,
-    skills: ["GitHub Actions", "Jenkins", "ArgoCD", "GitLab CI"],
+    skills: ["GitHub Actions", "Jenkins", "GitOps", "Git", "Automated Deployments"],
   },
   {
-    name: "Monitoring & Observability",
-    icon: Workflow,
-    skills: ["Prometheus", "Grafana", "Datadog", "ELK Stack"],
-  },
-  {
-    name: "Scripting & Languages",
+    name: "Programming & Scripting",
     icon: Terminal,
-    skills: ["Python", "Bash", "Go", "JavaScript"],
+    skills: ["Python", "Bash", "Shell Scripting", "Git"],
   },
   {
-    name: "Databases",
+    name: "Data & ETL",
     icon: Database,
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
+    skills: ["Airflow", "PySpark", "Pandas", "PostgreSQL", "MongoDB", "SQL"],
   },
   {
-    name: "Security",
+    name: "Operating Systems",
     icon: Shield,
-    skills: ["IAM", "Vault", "Security Groups", "SSL/TLS"],
+    skills: ["Linux", "Windows", "System Administration"],
+  },
+  {
+    name: "ML/AI Infrastructure",
+    icon: Workflow,
+    skills: ["Docker ML Workflows", "NVIDIA CUDA", "GPU Support", "Kubernetes ML"],
   },
 ]
 

@@ -6,20 +6,20 @@ import { Mail, Github, Linkedin, ArrowUpRight } from "lucide-react"
 const contactLinks = [
   {
     name: "Email",
-    value: "vrushabh@example.com",
-    href: "mailto:vrushabh@example.com",
+    value: "rushabhkothari414@gmail.com",
+    href: "mailto:rushabhkothari414@gmail.com",
     icon: Mail,
   },
   {
     name: "LinkedIn",
-    value: "linkedin.com/in/vrushabh",
-    href: "https://linkedin.com/in/vrushabh",
+    value: "linkedin.com/in/vrushabh-kothari-a33119235",
+    href: "https://www.linkedin.com/in/vrushabh-kothari-a33119235/",
     icon: Linkedin,
   },
   {
     name: "GitHub",
-    value: "github.com/vrushabh",
-    href: "https://github.com/vrushabh",
+    value: "github.com/vrushabhk-byte",
+    href: "https://github.com/vrushabhk-byte",
     icon: Github,
   },
 ]
@@ -40,7 +40,7 @@ export function ContactSection() {
         </p>
 
         <Button size="lg" className="mb-12" asChild>
-          <a href="mailto:vrushabh@example.com">
+          <a href="mailto:rushabhkothari414@gmail.com">
             <Mail className="mr-2 h-5 w-5" />
             Get In Touch
           </a>

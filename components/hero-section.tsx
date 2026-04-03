@@ -36,7 +36,7 @@ export function HeroSection() {
             {/* Social Links */}
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/vrushabhk-byte"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -45,7 +45,7 @@ export function HeroSection() {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/vrushabh-kothari-a33119235/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -54,7 +54,7 @@ export function HeroSection() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="mailto:vrushabh@example.com"
+                href="mailto:rushabhkothari414@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Email"
               >
@@ -67,22 +67,23 @@ export function HeroSection() {
           <div className="lg:w-2/3">
             <div className="space-y-6 text-muted-foreground leading-relaxed">
               <p>
-                I&apos;m a passionate DevOps Engineer with expertise in designing and implementing 
-                cloud-native solutions. My focus lies at the intersection of development and 
-                operations, where I build robust infrastructure that scales effortlessly.
+                DevOps Engineer at Automaton AI Infosystem (since April 2022) with a passion for designing 
+                and implementing cloud-native solutions. I specialize in building robust, scalable infrastructure 
+                at the intersection of development and operations.
               </p>
               <p>
-                With deep experience in <span className="text-foreground font-medium">AWS</span>, 
-                <span className="text-foreground font-medium"> Kubernetes</span>, and 
-                <span className="text-foreground font-medium"> Terraform</span>, I architect 
-                fault-tolerant systems that handle millions of requests while maintaining 
-                99.99% uptime. I believe in infrastructure as code and automate everything 
-                from provisioning to deployment.
+                I have hands-on experience with <span className="text-foreground font-medium">AWS</span>, 
+                <span className="text-foreground font-medium"> Kubernetes</span>, 
+                <span className="text-foreground font-medium"> Docker</span>, and 
+                <span className="text-foreground font-medium"> Terraform</span>. I architect infrastructure 
+                as code, automate CI/CD pipelines using Jenkins and GitHub Actions, and containerize ML/AI 
+                workflows with GPU support. My focus is on creating reliable, fault-tolerant systems that 
+                scale effortlessly.
               </p>
               <p>
-                When I&apos;m not optimizing CI/CD pipelines or containerizing applications, 
-                you&apos;ll find me exploring new cloud technologies, contributing to open-source 
-                projects, and sharing knowledge with the developer community.
+                When I&apos;m not orchestrating Kubernetes clusters or optimizing ETL pipelines, 
+                you&apos;ll find me exploring cloud technologies, working with infrastructure automation, 
+                and collaborating with data scientists on production-grade deployments.
               </p>
             </div>
           </div>
