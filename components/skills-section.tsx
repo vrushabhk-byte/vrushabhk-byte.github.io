@@ -49,7 +49,7 @@ export function SkillsSection() {
   return (
     <section id="skills" className="py-20 px-6 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-transparent to-primary/5 -z-10" />
-      
+
       <div className="container mx-auto max-w-5xl">
         <div className="mb-16">
           <div className="inline-flex items-center gap-3 px-4 py-2 bg-primary/10 border border-primary/30 rounded-full backdrop-blur-sm mb-6">
@@ -76,7 +76,7 @@ export function SkillsSection() {
                   {category.name}
                 </h3>
               </div>
-              
+
               <div className="space-y-3">
                 {category.skills.map((skill) => (
                   <div key={skill} className="flex items-start gap-3 group/skill">
@@ -98,7 +98,7 @@ export function SkillsSection() {
             <p className="text-muted-foreground">Technologies mastered</p>
           </div>
           <div className="glass rounded-2xl p-8 border-primary/20">
-            <div className="text-4xl font-bold text-primary mb-2">2+</div>
+            <div className="text-4xl font-bold text-primary mb-2">4+</div>
             <p className="text-muted-foreground">Years of DevOps expertise</p>
           </div>
           <div className="glass rounded-2xl p-8 border-primary/20">
