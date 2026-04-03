@@ -28,7 +28,7 @@ export function ContactSection() {
   return (
     <section id="contact" className="py-20 px-6 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-accent/10 -z-10" />
-      
+
       <div className="container mx-auto max-w-3xl">
         <div className="glass rounded-3xl p-10 md:p-16 border-primary/20 text-center">
           <div className="mb-8">
@@ -40,7 +40,7 @@ export function ContactSection() {
               Let&apos;s work together
             </h2>
             <p className="text-muted-foreground leading-relaxed text-lg max-w-2xl mx-auto">
-              Have a project in mind or want to discuss DevOps solutions? I&apos;m always excited to collaborate 
+              Have a project in mind or want to discuss DevOps solutions? I&apos;m always excited to collaborate
               on cloud infrastructure, automation, and innovative deployment strategies. Let&apos;s connect!
             </p>
           </div>
@@ -88,7 +88,7 @@ export function ContactSection() {
         {/* Stats */}
         <div className="mt-16 grid sm:grid-cols-2 md:grid-cols-4 gap-4">
           <div className="glass rounded-xl p-6 text-center border-primary/20">
-            <div className="text-3xl font-bold text-primary mb-2">2+</div>
+            <div className="text-3xl font-bold text-primary mb-2">4+</div>
             <p className="text-sm text-muted-foreground">Years Experience</p>
           </div>
           <div className="glass rounded-xl p-6 text-center border-primary/20">
