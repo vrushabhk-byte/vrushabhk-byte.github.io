@@ -31,7 +31,7 @@ const skillCategories = [
   {
     name: "Data & ETL",
     icon: Database,
-    skills: ["Airflow", "PySpark", "Pandas", "PostgreSQL", "MongoDB", "SQL"],
+    skills: ["PostgreSQL", "MongoDB", "SQL"],
   },
   {
     name: "Operating Systems",
