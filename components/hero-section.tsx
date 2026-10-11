@@ -1,118 +1,57 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Github, Linkedin, Mail, Sparkles } from "lucide-react"
+import { ArrowRight, ChevronDown, Filter, Search, Send, Zap } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-6 overflow-hidden">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 opacity-50" />
-        <div className="absolute top-0 -right-40 w-80 h-80 bg-primary/10 rounded-full filter blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 -left-40 w-80 h-80 bg-accent/10 rounded-full filter blur-3xl animate-pulse animation-delay-2000" />
-      </div>
+    <section id="about" className="reference-hero relative overflow-hidden px-6 pb-12 pt-40 md:px-10 md:pt-44">
+      <div className="hero-network" aria-hidden="true" />
+      <div className="hero-glow hero-glow-left" aria-hidden="true" />
+      <div className="hero-glow hero-glow-right" aria-hidden="true" />
+      <div className="hero-orbit" aria-hidden="true"><span /></div>
 
-      <div className="container mx-auto max-w-5xl">
-        <div className="flex flex-col lg:flex-row items-start gap-16">
-          {/* Left side - Name and navigation */}
-          <div className="lg:sticky lg:top-24 lg:w-1/3 space-y-8">
-            <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 rounded-full backdrop-blur-sm">
-                <Sparkles className="h-4 w-4 text-primary" />
-                <span className="text-sm text-primary font-medium">DevOps Engineer</span>
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
-                Vrushabh<br />Kothari
-              </h1>
-              <p className="text-lg text-muted-foreground font-medium">
-                Building scalable, resilient cloud infrastructure
-              </p>
+      <div className="relative mx-auto max-w-6xl">
+        <div className="mb-10 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.24em] text-[#3048d8] md:mb-12">
+          <span className="h-px w-5 bg-[#3048d8]" /> Available for hire
+        </div>
+
+        <h1 className="reference-title max-w-4xl text-[4.5rem] leading-[0.86] tracking-[-0.075em] md:text-[7rem] lg:text-[8rem]">
+          Vrushabh <span>Kothari</span>
+        </h1>
+        <p className="mt-7 font-mono text-xl font-semibold tracking-[0.02em] text-[#3048d8] md:text-2xl">DevOps Engineer</p>
+        <p className="mt-9 max-w-xl text-[15px] leading-7 text-[#33466d] md:text-base">
+          Building scalable cloud infrastructure and reliable deployment systems with AWS, Kubernetes, Docker, Terraform, and CI/CD automation. Turning complex operations into resilient, repeatable workflows.
+        </p>
+
+        <div className="mt-10 flex flex-wrap gap-3">
+          <a href="#projects" className="reference-button reference-button-primary">View Projects <ArrowRight className="h-4 w-4" /></a>
+          <a href="#projects" className="reference-button reference-button-outline">Live Demos <Zap className="h-4 w-4 text-[#ffca05]" /></a>
+          <a href="#contact" className="reference-button reference-button-soft"><Send className="h-4 w-4" /> Send a Message</a>
+        </div>
+
+        <div className="reference-tools" aria-hidden="true">
+          <Search className="h-5 w-5" />
+          <div className="reference-command">Navigate... try &apos;projects&apos;</div>
+          <div className="reference-filter"><Filter className="h-4 w-4" /></div>
+        </div>
+
+        <div className="mt-20 flex flex-wrap gap-x-12 gap-y-8 md:mt-24 md:gap-x-16">
+          {[['4+', 'Years in DevOps'], ['10+', 'Projects Built'], ['AWS', 'Cloud Platform'], ['24/7', 'Reliable Systems']].map(([value, label]) => (
+            <div key={label}>
+              <div className="reference-stat">{value}</div>
+              <div className="font-mono text-[10px] uppercase tracking-[0.16em] text-[#6d83ae]">{label}</div>
             </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Button asChild size="lg" className="group bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/50 transition-all">
-                <a href="#projects">
-                  View Projects
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild className="glass hover:glass-dark">
-                <a href="#contact">Contact Me</a>
-              </Button>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-4 pt-4">
-              <a
-                href="https://github.com/vrushabhk-byte"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 glass rounded-lg hover:bg-primary/20 hover:border-primary/50 transition-all duration-300"
-                aria-label="GitHub"
-              >
-                <Github className="h-5 w-5 text-primary" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/vrushabh-kothari-a33119235/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 glass rounded-lg hover:bg-primary/20 hover:border-primary/50 transition-all duration-300"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5 text-primary" />
-              </a>
-              <a
-                href="mailto:rushabhkothari414@gmail.com"
-                className="p-3 glass rounded-lg hover:bg-primary/20 hover:border-primary/50 transition-all duration-300"
-                aria-label="Email"
-              >
-                <Mail className="h-5 w-5 text-primary" />
-              </a>
-            </div>
-          </div>
-
-          {/* Right side - About content */}
-          <div className="lg:w-2/3">
-            <div className="glass rounded-2xl p-8 md:p-10 space-y-8 border-primary/20 hover:border-primary/40 transition-all duration-300">
-              <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
-                <p>
-                  DevOps Engineer at Automaton AI Infosystem (since April 2022) with a passion for designing 
-                  and implementing cloud-native solutions. I specialize in building robust, scalable infrastructure 
-                  at the intersection of development and operations.
-                </p>
-                <p>
-                  I have hands-on experience with <span className="text-primary font-semibold">AWS</span>, 
-                  <span className="text-primary font-semibold"> Kubernetes</span>, 
-                  <span className="text-primary font-semibold"> Docker</span>, and 
-                  <span className="text-primary font-semibold"> Terraform</span>. I architect infrastructure 
-                  as code, automate CI/CD pipelines using Jenkins and GitHub Actions, and containerize ML/AI 
-                  workflows with GPU support. My focus is on creating reliable, fault-tolerant systems that 
-                  scale effortlessly.
-                </p>
-                <p>
-                  When I&apos;m not orchestrating Kubernetes clusters or optimizing ETL pipelines, 
-                  you&apos;ll find me exploring cloud technologies, working with infrastructure automation, 
-                  and collaborating with data scientists on production-grade deployments.
-                </p>
-              </div>
-
-              {/* Tech Stack Quick View */}
-              <div className="pt-6 border-t border-border/50">
-                <p className="text-sm font-semibold text-foreground mb-4">Key Technologies</p>
-                <div className="flex flex-wrap gap-2">
-                  {["AWS", "Kubernetes", "Docker", "Terraform", "Python", "CI/CD"].map((tech) => (
-                    <div key={tech} className="px-3 py-1.5 bg-primary/10 border border-primary/30 rounded-full text-xs font-medium text-primary hover:bg-primary/20 transition-colors">
-                      {tech}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
   )
+}
+
+export function HeroScrollHint() {
+  return <div className="sr-only">Scroll to explore Vrushabh&apos;s work</div>
+}
+
+export function HeroNavHint() {
+  return <ChevronDown className="h-3 w-3" />
 }
