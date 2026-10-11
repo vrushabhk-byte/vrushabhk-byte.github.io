@@ -5,14 +5,17 @@ import { useEffect, useState } from "react"
 export function ReferenceEffects() {
   const [position, setPosition] = useState({ x: -100, y: -100 })
   const [visible, setVisible] = useState(false)
+  const [hovering, setHovering] = useState(false)
 
   useEffect(() => {
     const move = (event: MouseEvent) => {
       setPosition({ x: event.clientX, y: event.clientY })
       setVisible(true)
+      const target = event.target as HTMLElement
+      setHovering(Boolean(target.closest("a, button, [data-cursor-hover]")))
     }
     const leave = () => setVisible(false)
-    window.addEventListener("mousemove", move)
+    window.addEventListener("mousemove", move, { passive: true })
     document.documentElement.addEventListener("mouseleave", leave)
     return () => {
       window.removeEventListener("mousemove", move)
@@ -23,9 +26,12 @@ export function ReferenceEffects() {
   return (
     <div
       aria-hidden="true"
-      className={`reference-cursor ${visible ? "is-visible" : ""}`}
+      className={`reference-cursor ${visible ? "is-visible" : ""} ${hovering ? "is-hovering" : ""}`}
       style={{ left: position.x, top: position.y, position: "fixed" }}
-    />
+    >
+      <span className="reference-cursor-dot" />
+      <span className="reference-cursor-label">View</span>
+    </div>
   )
 }
 

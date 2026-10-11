@@ -174,9 +174,15 @@
 .reference-mobile-menu a { padding:10px; color:#24365c; }
 .reference-hero { min-height:790px; color:#10182d; background:#fff; }
 .reference-network-canvas { position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.72; }
-.reference-cursor { position:fixed; z-index:100; width:34px; height:34px; pointer-events:none; border:1px solid rgba(48,72,216,.7); border-radius:50%; transform:translate(-50%,-50%); opacity:0; transition:width .2s ease,height .2s ease,opacity .2s ease; box-shadow:0 0 0 7px rgba(48,72,216,.04), 0 0 22px rgba(48,72,216,.18); }
-.reference-cursor::after { content:""; position:absolute; left:50%; top:50%; width:4px; height:4px; transform:translate(-50%,-50%); border-radius:50%; background:#3048d8; }
+.reference-cursor { position:fixed; z-index:100; width:34px; height:34px; pointer-events:none; border:1px solid rgba(48,72,216,.72); border-radius:50%; transform:translate(-50%,-50%); opacity:0; transition:width .24s cubic-bezier(.22,1,.36,1),height .24s cubic-bezier(.22,1,.36,1),opacity .2s ease,background .24s ease,box-shadow .24s ease; box-shadow:0 0 0 7px rgba(48,72,216,.04), 0 0 22px rgba(48,72,216,.18); }
+.reference-cursor::before { content:""; position:absolute; inset:7px; border:1px solid rgba(48,72,216,.18); border-radius:50%; }
+.reference-cursor-dot { position:absolute; left:50%; top:50%; width:5px; height:5px; transform:translate(-50%,-50%); border-radius:50%; background:#3048d8; box-shadow:0 0 8px rgba(48,72,216,.65); }
+.reference-cursor-label { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%) scale(.5); color:#fff; font:600 8px/1 Geist,Arial,sans-serif; opacity:0; transition:opacity .18s ease,transform .24s ease; }
 .reference-cursor.is-visible { opacity:1; }
+.reference-cursor.is-hovering { width:62px; height:62px; border-color:#3048d8; background:rgba(48,72,216,.92); box-shadow:0 0 0 8px rgba(48,72,216,.08),0 0 28px rgba(48,72,216,.3); }
+.reference-cursor.is-hovering::before { border-color:rgba(255,255,255,.22); }
+.reference-cursor.is-hovering .reference-cursor-dot { opacity:0; }
+.reference-cursor.is-hovering .reference-cursor-label { opacity:1; transform:translate(-50%,-50%) scale(1); }
 .reference-header, .reference-hero, main > section { position:relative; z-index:1; }
 @media (hover:none) { .reference-cursor { display:none; } }
 .hero-network { position:absolute; inset:0; opacity:.62; background-image: linear-gradient(rgba(67,92,170,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(67,92,170,.07) 1px, transparent 1px), radial-gradient(circle, rgba(48,72,216,.32) 1.5px, transparent 2px); background-size:60px 60px,60px 60px,260px 190px; background-position:center top, center top, 10px 20px; }
