@@ -8,11 +8,22 @@ export function ReferenceEffects() {
   const [hovering, setHovering] = useState(false)
 
   useEffect(() => {
+    let frame = 0
+    let target = { x: -100, y: -100 }
+    let current = { x: -100, y: -100 }
+    const animate = () => {
+      current.x += (target.x - current.x) * 0.18
+      current.y += (target.y - current.y) * 0.18
+      setPosition({ x: current.x, y: current.y })
+      frame = requestAnimationFrame(animate)
+    }
+    frame = requestAnimationFrame(animate)
     const move = (event: MouseEvent) => {
-      setPosition({ x: event.clientX, y: event.clientY })
+      target = { x: event.clientX, y: event.clientY }
       setVisible(true)
-      const target = event.target as HTMLElement
-      setHovering(Boolean(target.closest("a, button, [data-cursor-hover]")))
+      setVisible(true)
+      const element = event.target as HTMLElement
+      setHovering(Boolean(element.closest("a, button, [data-cursor-hover]")))
     }
     const leave = () => setVisible(false)
     window.addEventListener("mousemove", move, { passive: true })
@@ -20,6 +31,7 @@ export function ReferenceEffects() {
     return () => {
       window.removeEventListener("mousemove", move)
       document.documentElement.removeEventListener("mouseleave", leave)
+      cancelAnimationFrame(frame)
     }
   }, [])
 
