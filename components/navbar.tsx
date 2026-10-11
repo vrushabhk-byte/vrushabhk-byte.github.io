@@ -15,7 +15,7 @@ export function Navbar() {
   return (
     <header className="reference-header">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10" aria-label="Main navigation">
-        <a href="#about" className="reference-logo" aria-label="Rahul Dangi home">RD</a>
+        <a href="#about" className="reference-logo" aria-label="Vrushabh Kothari home">VK</a>
         <div className="hidden items-center gap-10 md:flex">
           {navLinks.map((link) => (
             <a key={link.name} href={link.href} className="reference-nav-link">
